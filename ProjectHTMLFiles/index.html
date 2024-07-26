@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to CPS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../ProjectCSSFiles/welcomePageCSS.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: url(../ProjectImages/Homeintro.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .container {
+            display: grid;
+            gap: 5px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: 
+                "typingAni typingAni"
+                "Details Details"
+                "Buttons Buttons";
+            width: 80%;
+            max-width: 1200px;
+            min-height: 50vh;
+        }
+        
+        .typingAni {
+            display: inline-block;
+            padding: 15px;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            animation: typing 4s steps(40, end) forwards;
+            border-right: 0.15em solid #b004ff;
+            margin-left: 15vh;
+        }
+        
+        .Details {
+            grid-area: Details;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+        
+        .Buttons {
+            grid-area: Buttons;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+        }
+        
+        .btn {
+            background-color: #b004ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color .75s;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background-color: white;
+            color: #b004ff;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "typingAni"
+                    "Details"
+                    "Buttons";
+            }
+
+            .typingAni {
+                font-size: 2rem;
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .typingAni {
+                font-size: 1.5rem;
+            }
+
+            .Details {
+                font-size: 0.875rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.875rem;
+            }
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; border-right: none; } /* Remove border-right after animation ends */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="typingAni">
+            <p>Welcome to CPS.</p>
+        </div>
+        <div class="Details">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, dolorum ratione sint accusamus aut numquam quasi repudiandae impedit vitae illum aspernatur ipsam quibusdam velit! Omnis reprehenderit incidunt aperiam quam est.
+        </div>
+        <div class="Buttons">
+            <a href="../ProjectHTMLFiles/projectLogInPage.html" class="btn">Log-In</a>
+            <a href="../ProjectHTMLFiles/projectSignupPage.html" class="btn">Sign-UP</a>
+        </div>
+    </div>
+</body>
+</html>
