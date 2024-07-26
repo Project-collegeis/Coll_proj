@@ -1,0 +1,75 @@
+body {
+    background-image: url(../ProjectImages/Homeintro.jpg);
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.navbar{
+    backdrop-filter:blur(10px);
+    box-shadow: 0px 0px 30px #b004ff;
+}
+.navbar .navbar-brand{
+    color: #b004ff;
+}
+
+.navbar .nav_color{
+    background-color: #b004ff;
+}
+.navbar .nav-item a{
+    color:#b004ff;
+    border-radius: 2em ;
+    border: solid #b004ff;
+    margin-left:15px;
+}
+
+.navbar .nav-item a:hover{
+    color: white;
+    background-color: #b004ff;
+
+}
+.navbar .nav-item a.active{
+    color: white;
+    background-color: #b004ff;
+}
+
+.navbar .nav-item a.active:hover{
+    color: white;
+    background-color: #b004ff;
+}
+.d-flex .nav_Search{
+    color: white;
+    background-color: #b004ff;
+    border-radius: 2em;
+}
+.card-container{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    flex-direction: row;
+}
+.card-container a{
+    text-decoration: none;
+    background-color: #b004ff;
+}
+.card{
+    width: 325px;
+    background-color: #b004ff;
+    border-radius: 8px;
+    margin:20px;
+}
+
+.card img{
+    height: 400px;
+    width:325px;
+}
+.card-content{
+    color: white;
+    text-decoration: none;
+    background-color: #b004ff;
+    fill: #b004ff;
+}
+.card-text{
+    color:white;
+}
